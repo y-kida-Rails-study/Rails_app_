@@ -3,6 +3,10 @@ class UsersController < ApplicationController
   before_action :correct_user, only: [:edit, :update]
   include SessionsHelper
   
+  def index
+    @users = User.all.page(params[:page]).per(10)
+  end
+  
   def new
     @user = User.new
   end

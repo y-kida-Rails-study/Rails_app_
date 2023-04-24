@@ -1,0 +1,8 @@
+<div class="top">
+  <p>ユーザー一覧ページ</p>
+  <% @users.each do |user| %>
+    <p><%= user.name %></p>
+    <p><%= user.email %></p>
+  <% end %>
+  <%= paginate @users %>
+</div>

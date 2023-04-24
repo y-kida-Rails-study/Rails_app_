@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
       log_in(user)
       redirect_to_stored_url(user)
     else
-      render "nwe"
+      render "new"
     end
   end
   
