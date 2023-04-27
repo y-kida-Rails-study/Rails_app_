@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :logged_in_user, only: [:edit, :update]
+  before_action :logged_in_user, only: [:edit, :update, :destroy]
   before_action :correct_user, only: [:edit, :update]
   include SessionsHelper
   
@@ -38,6 +38,11 @@ class UsersController < ApplicationController
       flash.now[:danger] = '更新に失敗しました'
       render "edit"
     end
+  end
+  
+  def destroy
+    User.find_by(id: params[:id]).destroy!
+    redirect_to users_url
   end
   
   private

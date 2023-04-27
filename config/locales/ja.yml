@@ -1,8 +1,0 @@
-ja:
-   views:
-      pagenation:
-        first: "&laquo: 最初"
-        last: "最後 &laquo:"
-        next: "次 &laquo:"
-        previous: "&laquo: 前"
-        truncate: "&hellip:""
