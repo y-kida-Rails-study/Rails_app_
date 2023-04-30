@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
+  get 'books/index'
+  get 'books/new'
+  get 'books/show'
+  get 'books/create'
+  get 'books/edit'
+  get 'books/update'
+  get 'books/destroy'
   get '/hello', to: 'static_pages#hello'
   get '/about', to: 'static_pages#about' 
   get '/sign_up', to: 'users#new'
@@ -8,4 +15,5 @@ Rails.application.routes.draw do
   delete '/logout', to: 'sessions#destroy'
   root 'static_pages#hello'
   resources :users
+  resources :books
 end
